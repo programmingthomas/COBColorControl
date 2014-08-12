@@ -1,0 +1,14 @@
+PODS:
+  - COBColorControl (0.1.0)
+
+DEPENDENCIES:
+  - COBColorControl (from `../`)
+
+EXTERNAL SOURCES:
+  COBColorControl:
+    :path: ../
+
+SPEC CHECKSUMS:
+  COBColorControl: aaceeea2eaff7a0bdd985f67afbf275f47d9f0f3
+
+COCOAPODS: 0.33.1

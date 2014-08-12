@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HJd-yh-PYv">
+    <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="WHf-S3-j6E">
+            <objects>
+                <viewController id="HJd-yh-PYv" customClass="COBViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pU7-fp-YBe"/>
+                        <viewControllerLayoutGuide type="bottom" id="bM2-cu-9no"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gFP-M7-e4W">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7u-eh-hpE" customClass="COBColorControl">
+                                <rect key="frame" x="160" y="195" width="280" height="210"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="K2j-dL-ll4"/>
+                                    <constraint firstAttribute="width" constant="280" id="L0v-ZX-chU"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="colorUpdated:" destination="HJd-yh-PYv" eventType="valueChanged" id="NOT-96-ENO"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFy-Yk-1ZF">
+                                <rect key="frame" x="160" y="413" width="280" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Pzu-ST-uBW"/>
+                                    <constraint firstAttribute="height" constant="21" id="pTe-r4-fUr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JFy-Yk-1ZF" firstAttribute="top" secondItem="u7u-eh-hpE" secondAttribute="bottom" constant="8" id="3vg-Iy-Ubv"/>
+                            <constraint firstAttribute="centerY" secondItem="u7u-eh-hpE" secondAttribute="centerY" id="E4V-Ks-Pih"/>
+                            <constraint firstAttribute="centerX" secondItem="u7u-eh-hpE" secondAttribute="centerX" id="sR6-tx-dN2"/>
+                            <constraint firstAttribute="centerX" secondItem="JFy-Yk-1ZF" secondAttribute="centerX" id="y2x-1I-UhH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorControl" destination="u7u-eh-hpE" id="BU4-2v-rB5"/>
+                        <outlet property="colorLabel" destination="JFy-Yk-1ZF" id="qHb-yT-ucZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ewH-kA-Eub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="325"/>
+        </scene>
+    </scenes>
+</document>

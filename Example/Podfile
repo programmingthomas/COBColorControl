@@ -1,0 +1,7 @@
+target 'COBColorControl', :exclusive => true do
+  pod "COBColorControl", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "COBColorControl", :path => "../"
+end
