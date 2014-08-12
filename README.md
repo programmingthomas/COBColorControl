@@ -1,6 +1,6 @@
 # COBColorControl
 
-A GPU accelerated color picker for iOS.
+A GPU accelerated color picker for iOS. You can view a [demo here](https://www.youtube.com/watch?v=4B6AIAnnEHQ) or read more about it on my blog.
 
 ## Usage
 
