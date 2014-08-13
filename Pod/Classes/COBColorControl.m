@@ -256,6 +256,7 @@ const CGFloat kLoupeZoomedLineWidth = 5;
     }
 
     CGImageRef imageRef = CGBitmapContextCreateImage(context);
+    free(data);
     UIImage * image = [UIImage imageWithCGImage:imageRef];
     self.trackingView.image = image;
 }
