@@ -27,10 +27,7 @@
  * Get attribute/uniform locations
  * Configure values
  */
-@interface COBGLProgram : NSObject {
-    //Don't access these directly (they aren't meant for public use)
-    GLuint _program, _vertexShader, _fragmentShader;
-}
+@interface COBGLProgram : NSObject
 
 ///--------------------
 ///@name Initialization

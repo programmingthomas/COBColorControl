@@ -16,7 +16,10 @@
 
 #import "COBGLProgram.h"
 
-@interface COBGLProgram ()
+@interface COBGLProgram () {
+    //Don't access these directly (they aren't meant for public use)
+    GLuint _program, _vertexShader, _fragmentShader;
+}
 
 ///------------------------
 ///@name Private properties
