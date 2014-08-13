@@ -520,9 +520,7 @@ typedef struct {
     self.opaque = YES;
     
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-    if (!self.context) {
-        NSLog(@"Couldn't create OpenGL context. Something is very wrong");
-    }
+    NSAssert(self.context, @"Context must not be nil");
     [EAGLContext setCurrentContext:self.context];
     
     
@@ -593,7 +591,9 @@ typedef struct {
 
     for (NSString * order in orders) {
         NSString * fragmentShader = [NSString stringWithFormat:@"varying lowp vec2 outUV;uniform lowp float cMultiplier;void main() {lowp float c = outUV.y * outUV.x;lowp float x = c * cMultiplier;gl_FragColor = vec4(vec3(%@) + outUV.y - c, 1.0);}", order];
-        [programs addObject:[[COBGLProgram alloc] initWithVertexShader:VertexShader fragmentShader:fragmentShader attributes:@[@"position", @"uv"]]];
+        COBGLProgram * glProgram = [[COBGLProgram alloc] initWithVertexShader:VertexShader fragmentShader:fragmentShader attributes:@[@"position", @"uv"]];
+        NSAssert(glProgram, @"Program failed to compile");
+        [programs addObject:glProgram];
     }
     self.squarePrograms = programs;
 }
